@@ -1,0 +1,2 @@
+'政府', '工具', '目标', '消费者', '车型', '企业', '学协会', '其他机构', '技术', '环节', '科研院所'
+goverment，tool,goal,consumer,car,company,society,otherorganization,technology,link,researchinstitutions

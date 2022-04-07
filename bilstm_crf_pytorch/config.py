@@ -41,3 +41,31 @@ label2id = {
     "<START>": 31,
     "<STOP>": 32
 }
+
+english2chineselabel = {
+    'goverment':'政府',
+    'tool':'工具',
+    'goal':'目标',
+    'consumer':'消费者',
+    'cartype':'车型',
+    'company':'企业',
+    'society':'协会',
+    'otherorganization':'其他机构',
+    'technology':'技术',
+    'link':'环节',
+    'researchinstitutions':'科研院所'
+}
+
+chinese2englishlabel = {
+    '政府':'goverment',
+    '工具':'tool',
+    '目标':'goal',
+    '消费者':'consumer',
+    '车型':'cartype',
+    '企业':'company',
+    '协会':'society',
+    '其他机构':'otherorganization',
+    '技术':'technology',
+    '环节':'link',
+    '科研院所':'researchinstitutions'
+}
