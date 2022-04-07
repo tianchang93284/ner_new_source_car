@@ -160,7 +160,8 @@ def auto_source_label():
                 texts = texts.replace(' ', '')
                 texts = texts.replace('\n', '')
                 texts = texts.replace('\t', '。')
-
+                texts = texts.replace('{', '')
+                texts = texts.replace('}', '')
                 texts = re.split('。|？|；', texts)
                 # 过滤掉空字符
                 texts = list(filter(lambda x: len(x.strip()) != 0, texts))
