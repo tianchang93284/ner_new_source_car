@@ -14,7 +14,7 @@ class CluenerProcessor:
         else:
             files = ["train.json", "dev.json", "test.json"]
             for file in files:
-                with open(str(self.data_dir / file), 'r', encoding='utf-8') as fr:
+                with open(str(self.data_dir / file), 'r', encoding='gbk') as fr:
                     for line in fr:
                         line = json.loads(line.strip())
                         text = line['text']
