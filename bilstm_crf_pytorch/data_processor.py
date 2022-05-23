@@ -14,7 +14,7 @@ class CluenerProcessor:
         else:
             files = ["train.json", "dev.json", "test.json"]
             for file in files:
-                with open(str(self.data_dir / file), 'r') as fr:
+                with open(str(self.data_dir / file), 'r', encoding='gbk') as fr:
                     for line in fr:
                         line = json.loads(line)
                         text = line['text']
@@ -36,7 +36,7 @@ class CluenerProcessor:
 
     def _create_examples(self,input_path,mode):
         examples = []
-        with open(input_path, 'r') as f:
+        with open(input_path, 'r', encoding='gbk') as f:
             idx = 0
             for line in f:
                 json_d = {}
