@@ -104,11 +104,11 @@ def predict(args,model,processor):
     model_path = args.output_dir / 'best-model.bin'
     model = load_model(model, model_path=str(model_path))
     test_data = []
-    with open(str(args.data_dir / "test.json"), 'r') as f:
+    with open(str(args.data_dir / "test.json"), 'r', encoding = 'gbk') as f:
         idx = 0
         for line in f:
             json_d = {}
-            line = json.loads(line.strip())
+            line = json.loads(line.replace('\n', ''))
             text = line['text']
             words = list(text)
             labels = ['O'] * len(words)
