@@ -213,13 +213,13 @@ class CluenerProcessor(DataProcessor):
 
     def get_labels(self):
         """See base class."""
-        return ["X", "B-address", "B-book", "B-company", 'B-game', 'B-government', 'B-movie', 'B-name',
-                'B-organization', 'B-position','B-scene',"I-address",
-                "I-book", "I-company", 'I-game', 'I-government', 'I-movie', 'I-name',
-                'I-organization', 'I-position','I-scene',
-                "S-address", "S-book", "S-company", 'S-game', 'S-government', 'S-movie',
-                'S-name', 'S-organization', 'S-position',
-                'S-scene','O',"[START]", "[END]"]
+        return ["X", "B-goverment", "B-tool", "B-goal", 'B-consumer', 'B-cartype', 'B-company', 'B-society',
+                'B-otherorganization', 'B-technology','B-link', 'B-researchinstitutions',"I-goverment",
+                "I-tool", "I-goal", 'I-consumer', 'I-cartype', 'I-company', 'I-society',
+                'I-otherorganization', 'I-technology','I-link','I-researchinstitutions',
+                "S-goverment", "S-tool", "S-goal", 'S-consumer', 'S-cartype', 'S-company',
+                'S-society', 'S-otherorganization', 'S-technology',
+                'S-link', 'S-researchinstitutions','O',"[START]", "[END]"]
 
     def _create_examples(self, lines, set_type):
         """Creates examples for the training and dev sets."""

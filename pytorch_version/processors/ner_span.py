@@ -191,7 +191,7 @@ class CluenerProcessor(DataProcessor):
 
     def get_labels(self):
         """See base class."""
-        return ["O", "address", "book","company",'game','government','movie','name','organization','position','scene']
+        return ["O", "goverment", "tool","goal",'consumer','cartype','company','society','otherorganization','technology','link', 'researchinstitutions']
 
     def _create_examples(self, lines, set_type):
         """Creates examples for the training and dev sets."""
