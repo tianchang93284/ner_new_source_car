@@ -72,7 +72,7 @@ class DataProcessor(object):
     @classmethod
     def _read_json(self,input_file):
         lines = []
-        with open(input_file,'r') as f:
+        with open(input_file,'r',encoding='gbk') as f:
             for line in f:
                 line = json.loads(line.strip())
                 text = line['text']
