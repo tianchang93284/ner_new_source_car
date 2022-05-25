@@ -148,9 +148,9 @@ def predict(args,model,processor):
         for record in results:
             writer.write(json.dumps(record) + '\n')
     test_text = []
-    with open(str(args.data_dir / 'test.json'), 'r') as fr:
+    with open(str(args.data_dir / 'test.json'), 'r', encoding='gbk') as fr:
         for line in fr:
-            test_text.append(json.loads(line))
+            test_text.append(json.loads(line.replace('\n', '')))
     test_submit = []
     for x, y in zip(test_text, results):
         json_d = {}
