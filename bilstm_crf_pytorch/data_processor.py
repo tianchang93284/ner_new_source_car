@@ -16,7 +16,7 @@ class CluenerProcessor:
             for file in files:
                 with open(str(self.data_dir / file), 'r', encoding='gbk') as fr:
                     for line in fr:
-                        line = json.loads(line)
+                        line = json.loads(line.replace('\n', ''))
                         text = line['text']
                         self.vocab.update(list(text))
             self.vocab.build_vocab()
@@ -40,7 +40,7 @@ class CluenerProcessor:
             idx = 0
             for line in f:
                 json_d = {}
-                line = json.loads(line)
+                line = json.loads(line.replace('\n', ''))
                 text = line['text']
                 label_entities = line.get('label', None)
                 words = list(text)
