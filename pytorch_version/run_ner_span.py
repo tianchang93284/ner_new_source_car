@@ -417,7 +417,7 @@ def main():
     args = parser.parse_args()
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
-    args.output_dir = args.output_dir + '{}'.format(args.model_type)
+    args.output_dir = args.output_dir# + '{}'.format(args.model_type)
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
     init_logger(log_file=args.output_dir + '/{}-{}.log'.format(args.model_type, args.task_name))
