@@ -145,7 +145,7 @@ def train(args, train_dataset, model, tokenizer):
                         evaluate(args, model, tokenizer)
                 if args.local_rank in [-1, 0] and args.save_steps > 0 and global_step % args.save_steps == 0:
                     # Save model checkpoint
-                    output_dir = os.path.join(args.output_dir, "checkpoint-{}".format(global_step))
+                    output_dir = args.output_dir#os.path.join(args.output_dir, "checkpoint-{}".format(global_step))
                     if not os.path.exists(output_dir):
                         os.makedirs(output_dir)
                     model_to_save = (
@@ -417,7 +417,7 @@ def main():
     args = parser.parse_args()
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
-    args.output_dir = args.output_dir# + '{}'.format(args.model_type)
+    args.output_dir = args.output_dir + '{}'.format(args.model_type)
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
     init_logger(log_file=args.output_dir + '/{}-{}.log'.format(args.model_type, args.task_name))
